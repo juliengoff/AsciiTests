@@ -2,8 +2,6 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-import com.sun.xml.internal.fastinfoset.util.CharArray;
-
 public class EntityBase {
 	String correspond;
 	Integer L;
