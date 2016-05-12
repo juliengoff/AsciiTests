@@ -19,7 +19,4 @@ public class Game {
         System.out.println(soluce.getFinalMessage(L, H, ascii, indexTab));
 		
 	}
-	
-	
-
 }

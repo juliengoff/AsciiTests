@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution {
-	
 	public static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
 	
 	public ArrayList<Integer> getIndexTab(String text){

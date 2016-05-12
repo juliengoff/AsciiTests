@@ -2,12 +2,13 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
+
 public class EntityBase {
-	String correspond;
-	Integer L;
-	Integer H;
-	ArrayList<String> Representation1;
-	ArrayList<String> Representation2;
+	public String correspond;
+	public Integer L;
+	public Integer H;
+	public ArrayList<String> Representation1;
+	public ArrayList<String> Representation2;
 	
 	public char getRandomChar(){
 		String allChars = "!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
