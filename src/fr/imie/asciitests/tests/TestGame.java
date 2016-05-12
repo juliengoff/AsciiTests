@@ -12,7 +12,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
+<<<<<<< HEAD
  * @author juliengoff
+=======
+ * @author Benjamin
+>>>>>>> 28a5cd4c96415ff29d264d2e5403801e1f56cb68
  *
  */
 public class TestGame {

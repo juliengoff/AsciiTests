@@ -12,7 +12,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
+<<<<<<< HEAD
  * @author juliengoff
+=======
+ * @author Benjamin
+>>>>>>> 28a5cd4c96415ff29d264d2e5403801e1f56cb68
  *
  */
 public class TestUser {
@@ -45,8 +49,16 @@ public class TestUser {
 	public void tearDown() throws Exception {
 	}
 
+<<<<<<< HEAD
 	@Test
 	public void test() {
+=======
+	/**
+	 * Test method for {@link fr.imie.asciitests.main.User#main(java.lang.String[])}.
+	 */
+	@Test
+	public void testMain() {
+>>>>>>> 28a5cd4c96415ff29d264d2e5403801e1f56cb68
 		fail("Not yet implemented");
 	}
 

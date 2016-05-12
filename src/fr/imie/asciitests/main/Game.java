@@ -3,6 +3,7 @@ package fr.imie.asciitests.main;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+<<<<<<< HEAD
 public class Game {
 	
 	static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
@@ -88,6 +89,25 @@ public class Game {
 		// Write an action using System.out.println()
         // To debug: System.err.println("Debug messages...");
         System.out.println(message);
+=======
+import fr.imie.asciitests.process.Solution;
+
+public class Game {
+	
+	public static void main(String[] args) {
+		Solution soluce = new Solution();
+		
+        int L = 4;
+        int H = 5;
+        String T = "G";
+        
+        ArrayList<String> ascii = soluce.getPattern(1);
+        ArrayList<Integer> indexTab = soluce.getIndexTab(T);
+        System.out.println(soluce.getFinalMessage(L, H, ascii, indexTab));
+		
+>>>>>>> 28a5cd4c96415ff29d264d2e5403801e1f56cb68
 	}
+	
+	
 
 }
