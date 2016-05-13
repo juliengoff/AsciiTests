@@ -2,7 +2,9 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-public class EntityX extends EntityBase {
+import fr.imie.asciitests.interfaces.EntityLetter;
+
+public class EntityX extends EntityBase implements EntityLetter{
 
 	public EntityX() {
 		super();

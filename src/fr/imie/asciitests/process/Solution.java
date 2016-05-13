@@ -6,11 +6,16 @@ import java.util.Scanner;
 public class Solution {
 	public static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
 	
+	/**
+	 * Get array indexes
+	 * @param text
+	 * @return ArrayList : indexes needed for print message
+	 */
 	public ArrayList<Integer> getIndexTab(String text){
 		ArrayList<Integer> indexTab = new ArrayList<Integer>();
 		for(char c : text.toCharArray()) {
-			if(c < 'A' || c > 'Z') indexTab.add(26); // Si la lettre n'est pas entre A et Z, on remplace par "?"
-			else { // Sinon on récupère l'index du charactère dans un tableau
+			if(c < 'A' || c > 'Z') indexTab.add(26); 
+			else {
 				for(char letter : alphabet.toCharArray()) {
 					if(c == letter) {
 						indexTab.add(alphabet.indexOf(letter));
@@ -20,12 +25,18 @@ public class Solution {
 		}
 		return indexTab;
 	}
-	
+	/**
+	 * Get final output from parameters
+	 * @param int width
+	 * @param int height
+	 * @param ArrayList ascii : ascii pattern
+	 * @param ArrayList indexTab : index of letter pattern
+	 * @return String
+	 */
 	public String getFinalMessage(int width, int height, ArrayList<String> ascii, ArrayList<Integer> indexTab){
 		String message = "";
-		for(int j = 0; j < height; j++) { // Colonnes
-			for(int k = 0; k < indexTab.size(); k++) { // Lignes
-				// On récupère le caractère à l'index * longueur pour obtenir le début + la longueur pour la fin du caractère en cours
+		for(int j = 0; j < height; j++) { 
+			for(int k = 0; k < indexTab.size(); k++) { 
 				message += ascii.get(j).substring(indexTab.get(k)*width, indexTab.get(k)*width + width);
 			}
 			message += "\n";
@@ -33,6 +44,26 @@ public class Solution {
 		return message;
 	}
 	
+	/**
+	 * Print final output from parameters
+	 * @param int width
+	 * @param int height
+	 * @param ArrayList ascii : ascii pattern
+	 * @param ArrayList indexTab : index of letter pattern
+	 */
+	public void printFinalMessage(int width, int height, ArrayList<String> ascii, ArrayList<Integer> indexTab){
+		for(int j = 0; j < height; j++) { 
+			for(int k = 0; k < indexTab.size(); k++) { 
+				System.out.print(ascii.get(j).substring(indexTab.get(k)*width, indexTab.get(k)*width + width));
+			}
+			System.out.println("");
+		}
+	}
+	/**
+	 * @deprecated Static pattern. Removed for final version
+	 * @param number
+	 * @return ArrayList indexes
+	 */
 	public ArrayList<String> getPattern(int number){
 		ArrayList<String> asciiPattern = new ArrayList<String>();
 		
@@ -61,6 +92,9 @@ public class Solution {
 		return asciiPattern;
 	}
 	
+	/**
+	 * Initial solution for codingame
+	 */
 	public static void solutionCodinGame(){
 		
 		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";

@@ -2,7 +2,9 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-public class EntityK extends EntityBase {
+import fr.imie.asciitests.interfaces.EntityLetter;
+
+public class EntityK extends EntityBase implements EntityLetter{
 
 	public EntityK() {
 		super();
@@ -12,6 +14,7 @@ public class EntityK extends EntityBase {
 	}
 
 	public ArrayList<String> generateRepresentation1() {
+		
 		ArrayList<String> result = new ArrayList<String>();
 		result.add("# # ");
 		result.add("# # ");
