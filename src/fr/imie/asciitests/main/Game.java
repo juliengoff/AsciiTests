@@ -1,6 +1,7 @@
 package fr.imie.asciitests.main;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 import fr.imie.asciitests.entities.EntityBase;
@@ -29,50 +30,41 @@ public class Game {
         EntityBase eb = new EntityBase();
         
         ArrayList<EntityLetter> entityTab = eb.getEntityTab(alphabet);
+        entityTab.removeAll(Collections.singleton(null));
         
         System.out.println(height);
         System.out.println(width);
         
         System.out.println("MANHATTAN");
         
-        int state;
-        
+        // Column
         for (int i = 0; i < height; i++){
         	output.add("");
         	ArrayList<String> line = new ArrayList<String>();
         	System.gc();
-        	if (pattern == 1){
-            	state = 0;
+        	if (pattern == 1){ // Concat lines
             	for (EntityLetter entityLetter : entityTab) {
             		line =  entityLetter.generateRepresentation1();
-            		output.set(i, output.get(i) + line.get(i));
+            		try {
+            			output.set(i, output.get(i) + line.get(i));
+            		}catch (Exception e){
+            			
+            		}
         		}
-        	}else {
-            	state = 0;
+        	}else { // Concat lines
             	for (EntityLetter entityLetter : entityTab) {
             		line =  entityLetter.generateRepresentation2();
-            		output.set(i, output.get(i) + line.get(i));
+            		try {
+            			output.set(i, output.get(i) + line.get(i));
+            		}catch (Exception e){
+            			
+            		}
         		}
         	}
         }
         
         for (String str : output) {
 			System.out.println(str);
-		}
-        
-	}
-	
-	public static void getOutput(EntityLetter letter, int pattern){
-		ArrayList<String> letterArray;
-		if (pattern == 1){
-			letterArray = letter.generateRepresentation1();
-		}
-		else{
-			letterArray = letter.generateRepresentation2();
-		}
-			
-		for (String string : letterArray) {
-			System.out.println(string);
 		}
 	}
 }

@@ -1,6 +1,7 @@
 package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import fr.imie.asciitests.entityfactory.EntityFactory;
 import fr.imie.asciitests.interfaces.EntityLetter;
@@ -30,7 +31,7 @@ public class EntityBase {
 		for (char c : text.toCharArray()) {
 			entityTab.add((EntityLetter) EntityFactory.getLetter(c));
 		}
-		
+		entityTab.removeAll(Collections.singleton(null));
 		return entityTab;
 	}
 	
