@@ -28,17 +28,20 @@ public class EntityI extends EntityBase implements EntityLetter{
 	}
 
 	private void AleaReplace(String string) {
-		string.replace('#', genAleaChar());
-	}
-
-	private char genAleaChar() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (this.patternNumber == 1){
+			string.replace('#', super.getRandomChar());
+		}else {
+			string.replace('/', super.getRandomChar());
+			string.replace('_', super.getRandomChar());
+			string.replace('\\', super.getRandomChar());
+			string.replace('|', super.getRandomChar());
+		}
+		
 	}
 	
 	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
-		result.add(".----------------.  ");
+		result.add(" .----------------. ");
 		result.add("| .--------------. |");
 		result.add("| |     _____    | |");
 		result.add("| |    |_   _|   | |");
@@ -48,7 +51,7 @@ public class EntityI extends EntityBase implements EntityLetter{
 		result.add("| |    |_____|   | |");
 		result.add("| |              | |");
 		result.add("| '--------------' |");
-		result.add("'----------------'  ");
+		result.add(" '----------------' ");
 	
 		for (String string : result) {
 			AleaReplace(string);

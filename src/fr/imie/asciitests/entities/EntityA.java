@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import fr.imie.asciitests.interfaces.EntityLetter;
 
-public class EntityA extends EntityBase implements EntityLetter{
+public class EntityA extends EntityBase implements EntityLetter {
 
 	public EntityA() {
 		super();
@@ -15,9 +15,6 @@ public class EntityA extends EntityBase implements EntityLetter{
 
 	
 	public ArrayList<String> generateRepresentation1() {
-		super.L = 4;
-		super.H = 5;
-		
 		ArrayList<String> result = new ArrayList<String>();
 		result.add(" #  ");
 		result.add("# # ");
@@ -32,9 +29,6 @@ public class EntityA extends EntityBase implements EntityLetter{
 	}
 	
 	public ArrayList<String> generateRepresentation2() {
-		super.L = 20;
-		super.H = 11;
-				
 		ArrayList<String> result = new ArrayList<String>();
 		result.add(" .----------------. ");
 		result.add("| .--------------. |");
@@ -67,12 +61,41 @@ public class EntityA extends EntityBase implements EntityLetter{
 		
 	}
 
+	/**
+	 * Get width of the pattern
+	 * @param Integer pattern
+	 * @return Integer
+	 */
+	public Integer getWidth(int pattern){
+		ArrayList<String> rep;
+		if (pattern == 1){
+			rep = this.Representation1;
+		}else {
+			rep = this.Representation2;
+		}
+		return rep.get(0).length();
+	}
+	
+	/**
+	 * Get height of the pattern
+	 * @param Integer pattern
+	 * @return Integer
+	 */
+	public Integer getHeight(int pattern){
+		ArrayList<String> rep;
+		if (pattern == 1){
+			rep = this.Representation1;
+		}else {
+			rep = this.Representation2;
+		}
+		return rep.size();
+	}
 
 
 	@Override
 	public String getCorrespond() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.correspond;
 	}
 	
 }

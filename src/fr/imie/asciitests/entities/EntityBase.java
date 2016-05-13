@@ -8,10 +8,10 @@ import fr.imie.asciitests.interfaces.EntityLetter;
 
 public class EntityBase {
 
-	String correspond;
-	Integer L;
-	Integer H;
-	public Integer patternNumber;
+	public String correspond;
+	public Integer patternNumber = 1;
+	public Integer width;
+	public Integer height;
 	public ArrayList<String> Representation1;
 	public ArrayList<String> Representation2;
 	
@@ -25,7 +25,7 @@ public class EntityBase {
         return start + (int)Math.round(Math.random() * (end - start));
     }
 	
-	public ArrayList<EntityLetter> getEntityTab (String text) {
+	public ArrayList<EntityLetter> getEntityTab (String text){
 		ArrayList<EntityLetter> entityTab = new ArrayList<EntityLetter>();
 		
 		for (char c : text.toCharArray()) {

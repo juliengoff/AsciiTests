@@ -1,8 +1,5 @@
 package fr.imie.asciitests.entityfactory;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 
 import fr.imie.asciitests.entities.*;
 
@@ -12,8 +9,8 @@ public class EntityFactory {
 	 * @param char letter
 	 * @return letter Entity
 	 */
-	public static  Object getLetter(char c){
-		
+
+	public static Object getLetter(char c){
 		switch (c){
 			case 'A' :
 				return new EntityA();

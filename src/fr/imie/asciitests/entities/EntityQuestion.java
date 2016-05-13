@@ -2,7 +2,9 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-public class EntityQuestion extends EntityBase {
+import fr.imie.asciitests.interfaces.EntityLetter;
+
+public class EntityQuestion extends EntityBase implements EntityLetter{
 
 	public EntityQuestion() {
 		super();
@@ -36,7 +38,7 @@ public class EntityQuestion extends EntityBase {
 	
 	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
-		result.add(".----------------.  ");
+		result.add(" .----------------. ");
 		result.add("| .--------------. |");
 		result.add("| |    ______    | |");
 		result.add("| |   / _ __ `.  | |");
@@ -46,11 +48,17 @@ public class EntityQuestion extends EntityBase {
 		result.add("| |    (_)       | |");
 		result.add("| |              | |");
 		result.add("| '--------------' |");
-		result.add("'----------------' ");
+		result.add(" '----------------' ");
 	
 		for (String string : result) {
 			AleaReplace(string);
 		}
+		return null;
+	}
+
+	@Override
+	public java.lang.String getCorrespond() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }

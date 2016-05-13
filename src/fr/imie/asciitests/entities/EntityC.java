@@ -15,8 +15,6 @@ public class EntityC extends EntityBase implements EntityLetter{
 
 	
 	public ArrayList<String> generateRepresentation1() {
-		super.L = 4;
-		super.H = 5;
 		ArrayList<String> result = new ArrayList<String>();
 		result.add(" ## ");
 		result.add("#   ");

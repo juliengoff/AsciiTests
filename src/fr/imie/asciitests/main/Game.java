@@ -1,13 +1,9 @@
 package fr.imie.asciitests.main;
 
 import java.util.ArrayList;
-import java.util.Random;
-
-import javax.sound.sampled.Line;
 
 import fr.imie.asciitests.entities.EntityBase;
 import fr.imie.asciitests.interfaces.EntityLetter;
-import fr.imie.asciitests.process.Solution;
 
 public class Game {
 	
