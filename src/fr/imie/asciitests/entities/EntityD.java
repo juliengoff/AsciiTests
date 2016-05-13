@@ -62,10 +62,10 @@ public class EntityD extends EntityBase implements EntityLetter{
 	}
 
 
-
 	@Override
 	public String getCorrespond() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.correspond;
 	}
+	
+
 }

@@ -21,7 +21,8 @@ public class EntityBase {
 		return '#';
 	}
 	
-	public static  int randomizer(int start, int end) {
+
+	public static int randomizer(int start, int end) {
         return start + (int)Math.round(Math.random() * (end - start));
     }
 	

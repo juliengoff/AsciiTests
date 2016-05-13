@@ -24,7 +24,7 @@ public class EntityY extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
+		return result;
 	}
 
 	private void AleaReplace(String string) {
@@ -53,13 +53,12 @@ public class EntityY extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
-	}
-
-	@Override
-	public java.lang.String getCorrespond() {
-		// TODO Auto-generated method stub
-		return null;
+		return result;
 	}
 	
+	@Override
+	public String getCorrespond() {
+		return this.correspond;
+	}
+
 }

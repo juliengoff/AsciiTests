@@ -24,7 +24,7 @@ public class EntityH extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
+		return result;
 	}
 
 	private void AleaReplace(String string) {
@@ -65,4 +65,6 @@ public class EntityH extends EntityBase implements EntityLetter{
 		return this.correspond;
 	}
 	
+
+
 }

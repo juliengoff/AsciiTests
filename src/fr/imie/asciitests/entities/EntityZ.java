@@ -54,13 +54,20 @@ public class EntityZ extends EntityBase implements EntityLetter{
 			AleaReplace(string);
 		}
 		return result;
+<<<<<<< HEAD
 	}
 
 	@Override
 	public String getCorrespond() {
 		// TODO Auto-generated method stub
 		return null;
+=======
+>>>>>>> e39b6e083329fea791f311066b9aa412a9eafea7
 	}
 	
+	@Override
+	public String getCorrespond() {
+		return this.correspond;
+	}
 	
 }

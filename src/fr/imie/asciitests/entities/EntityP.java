@@ -56,10 +56,10 @@ public class EntityP extends EntityBase implements EntityLetter{
 		return null;
 	}
 
+
 	@Override
-	public java.lang.String getCorrespond() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getCorrespond() {
+		return this.correspond;
 	}
 	
 }
