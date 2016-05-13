@@ -2,7 +2,9 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-public class EntityF extends EntityBase{
+import fr.imie.asciitests.interfaces.EntityLetter;
+
+public class EntityF extends EntityBase implements EntityLetter{
 	
 	public EntityF() {
 		super();
@@ -26,7 +28,7 @@ public class EntityF extends EntityBase{
 		return result;
 	}
 	
-	private ArrayList<String> generateRepresentation2() {
+	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
 		result.add(" .----------------. ");
 		result.add("| .--------------. |");
@@ -57,5 +59,12 @@ public class EntityF extends EntityBase{
 			string.replace('|', super.getRandomChar());
 		}
 		
+	}
+
+
+	@Override
+	public String getCorrespond() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

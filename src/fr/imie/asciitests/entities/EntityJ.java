@@ -2,7 +2,9 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-public class EntityJ extends EntityBase {
+import fr.imie.asciitests.interfaces.EntityLetter;
+
+public class EntityJ extends EntityBase implements EntityLetter{
 
 	public EntityJ() {
 		super();
@@ -50,6 +52,12 @@ public class EntityJ extends EntityBase {
 		for (String string : result) {
 			AleaReplace(string);
 		}
+		return null;
+	}
+
+	@Override
+	public String getCorrespond() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 	
