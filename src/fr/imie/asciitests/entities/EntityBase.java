@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 
 public class EntityBase {
+
 	String correspond;
 	Integer L;
 	Integer H;
 	public ArrayList<String> Representation1;
 	public ArrayList<String> Representation2;
-
 	
 	public char getRandomChar(){
 		String allChars = "!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
@@ -21,5 +21,4 @@ public class EntityBase {
         return start + (int)Math.round(Math.random() * (end - start));
     }
 	
-
 }

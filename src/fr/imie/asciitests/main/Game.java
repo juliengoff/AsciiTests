@@ -2,23 +2,20 @@ package fr.imie.asciitests.main;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import fr.imie.asciitests.process.Solution;
 
 public class Game {
 	
-	static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
-	
 	public static void main(String[] args) {
+		Solution soluce = new Solution();
 		
-		Scanner in = new Scanner(System.in);
-        int L = in.nextInt();
-        int H = in.nextInt();
-        in.nextLine();
-        String T = in.nextLine();
-        T = T.toUpperCase();
-        ArrayList<String> ascii = new ArrayList<String>();
-        for (int i = 0; i < H; i++) {
-            String ROW = in.nextLine();
-            ascii.add(ROW);
-        }
+        int L = 4;
+        int H = 5;
+        String T = "G";
+        
+        ArrayList<String> ascii = soluce.getPattern(1);
+        ArrayList<Integer> indexTab = soluce.getIndexTab(T);
+        System.out.println(soluce.getFinalMessage(L, H, ascii, indexTab));
+		
 	}
 }
