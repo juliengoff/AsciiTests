@@ -60,6 +60,7 @@ public class EntityA extends EntityBase implements EntityLetter {
 		}
 		
 	}
+
 	/**
 	 * Get width of the pattern
 	 * @param Integer pattern
@@ -93,6 +94,7 @@ public class EntityA extends EntityBase implements EntityLetter {
 
 	@Override
 	public String getCorrespond() {
+		// TODO Auto-generated method stub
 		return this.correspond;
 	}
 	

@@ -38,7 +38,7 @@ public class EntityP extends EntityBase implements EntityLetter{
 	
 	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
-		result.add(".----------------.  ");
+		result.add(" .----------------. ");
 		result.add("| .--------------. |");
 		result.add("| |   ______     | |");
 		result.add("| |  |_   __ \\   | |");
@@ -48,13 +48,15 @@ public class EntityP extends EntityBase implements EntityLetter{
 		result.add("| |  |_____|     | |");
 		result.add("| |              | |");
 		result.add("| '--------------' |");
-		result.add("'----------------' ");
+		result.add(" '----------------' ");
 	
 		for (String string : result) {
 			AleaReplace(string);
 		}
 		return null;
 	}
+
+
 	@Override
 	public String getCorrespond() {
 		return this.correspond;

@@ -8,6 +8,7 @@ import fr.imie.asciitests.interfaces.EntityLetter;
 
 
 public class EntityBase {
+
 	public String correspond;
 	public Integer patternNumber = 1;
 	public Integer width;
@@ -21,6 +22,7 @@ public class EntityBase {
 		return '#';
 	}
 	
+
 	public static int randomizer(int start, int end) {
         return start + (int)Math.round(Math.random() * (end - start));
     }

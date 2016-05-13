@@ -9,6 +9,7 @@ public class EntityFactory {
 	 * @param char letter
 	 * @return letter Entity
 	 */
+
 	public static Object getLetter(char c){
 		switch (c){
 			case 'A' :

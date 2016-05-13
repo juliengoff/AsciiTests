@@ -2,16 +2,13 @@ package fr.imie.asciitests.main;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
-
 import fr.imie.asciitests.entities.EntityBase;
-import fr.imie.asciitests.entityfactory.EntityFactory;
 import fr.imie.asciitests.interfaces.EntityLetter;
-import fr.imie.asciitests.process.Solution;
 
 public class Game {
 	
 	public static void main(String[] args) {
+
 		int pattern = EntityBase.randomizer(1, 2);
 		int width, height;
 		ArrayList<String> output = new ArrayList<String>();

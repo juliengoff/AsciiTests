@@ -60,7 +60,8 @@ public class EntityC extends EntityBase implements EntityLetter{
 		}
 		
 	}
-	
+
+
 	@Override
 	public String getCorrespond() {
 		return this.correspond;

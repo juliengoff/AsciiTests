@@ -39,7 +39,7 @@ public class EntityK extends EntityBase implements EntityLetter{
 	
 	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
-		result.add(".----------------.  ");
+		result.add(" .----------------. ");
 		result.add("| .--------------. |");
 		result.add("| |  ___  ____   | |");
 		result.add("| | |_  ||_  _|  | |");
@@ -49,13 +49,16 @@ public class EntityK extends EntityBase implements EntityLetter{
 		result.add("| | |____||____| | |");
 		result.add("| |              | |");
 		result.add("| '--------------' |");
-		result.add("'----------------'  ");
+		result.add(" '----------------' ");
 	
 		for (String string : result) {
 			AleaReplace(string);
 		}
 		return result;
 	}
+
+
+
 	
 	@Override
 	public String getCorrespond() {
