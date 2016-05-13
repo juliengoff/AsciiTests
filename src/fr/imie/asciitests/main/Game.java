@@ -2,39 +2,88 @@ package fr.imie.asciitests.main;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
 import fr.imie.asciitests.entities.EntityBase;
 import fr.imie.asciitests.interfaces.EntityLetter;
 
 public class Game {
+	public static int width, height, pattern;
+	public static String text, alphabet;
 	
 	public static void main(String[] args) {
-
-		int pattern = EntityBase.randomizer(1, 2);
-		int width, height;
+		
+		Game.setPattern();
+		Game.setDim();
+		Game.setText();
+		
 		ArrayList<String> output = new ArrayList<String>();
 		
-		if (pattern == 1){
-			width = 4;
-	        height = 5;
-		}else {
-			width = 20;
-	        height = 11;
-		}
-		
-        
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
         
         EntityBase eb = new EntityBase();
-        
         ArrayList<EntityLetter> entityTab = eb.getEntityTab(alphabet);
         entityTab.removeAll(Collections.singleton(null));
         
-        System.out.println(height);
-        System.out.println(width);
+        System.out.println(Game.height);
+        System.out.println(Game.width);
         
-        System.out.println("MANHATTAN");
+        System.out.println(Game.text);
         
-        // Column
+        output = Game.getLines(entityTab);
+        
+        for (String str : output) {
+			System.out.println(str);
+		}
+	}
+	
+	public static boolean controlFields(int width, int height, String text){
+		boolean result = true;
+		if (width < 0 || width > 30){
+			System.err.println("Width is too long or too short");
+			result = false;
+		}
+		if (height < 0 || height > 30){
+			System.err.println("Height is too long or too short");
+			result = false;
+		}
+		if (text.length() < 0 || text.length() > 200){
+			System.err.println("Text is too long or too short");
+			result = false;
+		}
+		return result;
+	}
+	
+	public static void init(){
+		Game.setPattern();
+		Game.setDim();
+		Game.setText();
+	}
+	
+	public static void setPattern(){
+		Game.pattern = EntityBase.randomizer(1, 2);
+	}
+	
+	public static void setText(){
+		Game.text = "MANHATTAN";
+		Game.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
+	}
+	
+	public static void setDim(){
+		if (Game.pattern == 1){
+			Game.width = 4;
+			Game.height = 5;
+		}else {
+			Game.width = 20;
+			Game.height = 11;
+		}
+	}
+	
+	public static ArrayList<String> getLines(ArrayList<EntityLetter> entityTab){
+		boolean test = Game.controlFields(Game.width,Game.height,Game.text);
+		if (!test){
+			System.exit(0);
+		}
+		ArrayList<String> output = new ArrayList<String>();
+		 // Column
         for (int i = 0; i < height; i++){
         	output.add("");
         	ArrayList<String> line = new ArrayList<String>();
@@ -59,9 +108,6 @@ public class Game {
         		}
         	}
         }
-        
-        for (String str : output) {
-			System.out.println(str);
-		}
+        return output;
 	}
 }
