@@ -7,8 +7,8 @@ public class EntityBase {
 	String correspond;
 	Integer L;
 	Integer H;
-	ArrayList<String> Representation1;
-	ArrayList<String> Representation2;
+	public ArrayList<String> Representation1;
+	public ArrayList<String> Representation2;
 
 	
 	public char getRandomChar(){

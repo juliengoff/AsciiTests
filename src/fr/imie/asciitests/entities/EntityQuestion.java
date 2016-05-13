@@ -2,9 +2,9 @@ package fr.imie.asciitests.entities;
 
 import java.util.ArrayList;
 
-public class EntityInter extends EntityBase {
+public class EntityQuestion extends EntityBase {
 
-	public EntityInter() {
+	public EntityQuestion() {
 		super();
 		this.correspond = "?";
 		this.Representation1 = generateRepresentation1();
