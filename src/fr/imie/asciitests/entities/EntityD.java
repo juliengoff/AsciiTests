@@ -60,4 +60,9 @@ public class EntityD extends EntityBase implements EntityLetter{
 		}
 		
 	}
+	@Override
+	public String getCorrespond() {
+		return this.correspond;
+	}
+	
 }

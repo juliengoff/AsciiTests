@@ -23,7 +23,7 @@ public class EntityJ extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
+		return result;
 	}
 
 	private void AleaReplace(String string) {
@@ -55,8 +55,12 @@ public class EntityJ extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
+		return result;
 	}
 	
+	@Override
+	public String getCorrespond() {
+		return this.correspond;
+	}
 	
 }

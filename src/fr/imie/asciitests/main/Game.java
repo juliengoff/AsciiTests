@@ -11,26 +11,55 @@ import fr.imie.asciitests.process.Solution;
 public class Game {
 	
 	public static void main(String[] args) {
-		Solution soluce = new Solution();
+		int pattern = EntityBase.randomizer(1, 2);
+		int width, height;
+		ArrayList<String> output = new ArrayList<String>();
 		
-        int L = 4;
-        int H = 5;
-        int pattern = 2;
-        String T = "AA";
+		if (pattern == 1){
+			width = 4;
+	        height = 5;
+		}else {
+			width = 20;
+	        height = 11;
+		}
+		
+        
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
         
         EntityBase eb = new EntityBase();
         
-        ArrayList<EntityLetter> entityTab = eb.getEntityTab(T);
-        for (EntityLetter entityLetter : entityTab) {
-        	String t = entityLetter.getCorrespond();
-        	System.out.print(t);
+        ArrayList<EntityLetter> entityTab = eb.getEntityTab(alphabet);
+        
+        System.out.println(height);
+        System.out.println(width);
+        
+        System.out.println("MANHATTAN");
+        
+        int state;
+        
+        for (int i = 0; i < height; i++){
+        	output.add("");
+        	ArrayList<String> line = new ArrayList<String>();
+        	System.gc();
+        	if (pattern == 1){
+            	state = 0;
+            	for (EntityLetter entityLetter : entityTab) {
+            		line =  entityLetter.generateRepresentation1();
+            		output.set(i, output.get(i) + line.get(i));
+        		}
+        	}else {
+            	state = 0;
+            	for (EntityLetter entityLetter : entityTab) {
+            		line =  entityLetter.generateRepresentation2();
+            		output.set(i, output.get(i) + line.get(i));
+        		}
+        	}
+        }
+        
+        for (String str : output) {
+			System.out.println(str);
 		}
         
-//        for (char c : T.toCharArray()) {
-//        	getOutput((EntityLetter) ef.getLetter(c), pattern);
-//		}
-//        System.gc();
-		
 	}
 	
 	public static void getOutput(EntityLetter letter, int pattern){
