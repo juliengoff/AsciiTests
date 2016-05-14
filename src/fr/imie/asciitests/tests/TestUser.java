@@ -10,6 +10,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.github.javafaker.Faker;
+
 import fr.imie.asciitests.entities.*;
 import fr.imie.asciitests.interfaces.EntityLetter;
 import fr.imie.asciitests.main.Game;
@@ -160,4 +162,24 @@ public class TestUser {
 		}
 		
 	}	
+	
+	@Test
+	public void testAnyText(){
+		Faker faker = new Faker();
+		String randomText = faker.firstName();
+		
+		Game.text = randomText;
+		
+		EntityBase eb = new EntityBase();
+		ArrayList<EntityLetter> entityTab = eb.getEntityTab(Game.text);
+		ArrayList<EntityLetter> expectedTab = eb.getEntityTab(randomText);
+		
+		ArrayList<String> response = User.getLines(entityTab);
+		ArrayList<String> expectedOut = Game.getLines(expectedTab);
+		
+		for (int i = 0; i < response.size(); i++) {
+			Assert.assertEquals(expectedOut.get(i), response.get(i));
+		}
+		
+	}
 }
