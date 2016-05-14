@@ -111,11 +111,11 @@ public class Game {
 		}
 		ArrayList<String> output = new ArrayList<String>();
 		 // Column
-        for (int i = 0; i < height; i++){
+        for (int i = 0; i < Game.height; i++){
         	output.add("");
         	ArrayList<String> line = new ArrayList<String>();
         	System.gc();
-        	if (pattern == 1){ // Concat lines
+        	if (Game.pattern == 1){ // Concat lines
             	for (EntityLetter entityLetter : entityTab) {
             		line =  entityLetter.generateRepresentation1();
             		try {
@@ -137,4 +137,5 @@ public class Game {
         }
         return output;
 	}
+	
 }
