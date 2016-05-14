@@ -1,6 +1,5 @@
 package fr.imie.asciitests.tests;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
