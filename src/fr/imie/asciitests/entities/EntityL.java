@@ -11,7 +11,10 @@ public class EntityL extends EntityBase implements EntityLetter{
 		this.correspond = "L";
 		this.Representation1 = generateRepresentation1();
 	}
-
+	/**
+	 * Generate representation for pattern 1
+	 * @return ArrayList
+	 */
 	public ArrayList<String> generateRepresentation1() {
 		
 		ArrayList<String> result = new ArrayList<String>();
@@ -26,7 +29,11 @@ public class EntityL extends EntityBase implements EntityLetter{
 		}
 		return result;
 	}
-
+	/**
+	 * Random replace of the char
+	 * TODO : Add faker to replace char (only for '#' char)
+	 * @param string
+	 */
 	private void AleaReplace(String string) {
 		string.replace('#', genAleaChar());
 	}
@@ -36,7 +43,10 @@ public class EntityL extends EntityBase implements EntityLetter{
 		return 0;
 	}
 	
-	
+	/**
+	 * Generate representation for pattern 2
+	 * @return ArrayList
+	 */
 	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
 		result.add(" .----------------. ");

@@ -4,12 +4,12 @@ package fr.imie.asciitests.entityfactory;
 import fr.imie.asciitests.entities.*;
 
 public class EntityFactory {
+	
 	/**
 	 * Get entity of letter
 	 * @param char letter
 	 * @return letter Entity
 	 */
-
 	public static Object getLetter(char c){
 		switch (c){
 			case 'A' :

@@ -10,14 +10,17 @@ public class Game {
 	public static int width, height, pattern;
 	public static String text, alphabet;
 	
+	/**
+	 * Entry of the program
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		
+
 		Game.setPattern();
 		Game.setDim();
 		Game.setText();
 		
 		ArrayList<String> output = new ArrayList<String>();
-		
         
         EntityBase eb = new EntityBase();
         ArrayList<EntityLetter> entityTab = eb.getEntityTab(alphabet);
@@ -35,6 +38,13 @@ public class Game {
 		}
 	}
 	
+	/**
+	 * Control the entries as the CodinGame WebSite requires
+	 * @param width
+	 * @param height
+	 * @param text
+	 * @return
+	 */
 	public static boolean controlFields(int width, int height, String text){
 		boolean result = true;
 		if (width < 0 || width > 30){
@@ -52,21 +62,33 @@ public class Game {
 		return result;
 	}
 	
+	/**
+	 * Initialize the entries
+	 */
 	public static void init(){
 		Game.setPattern();
 		Game.setDim();
 		Game.setText();
 	}
 	
+	/**
+	 * Define which pattern to use with a random method
+	 */
 	public static void setPattern(){
 		Game.pattern = EntityBase.randomizer(1, 2);
 	}
 	
+	/**
+	 * Set a text to return as ACSII characters
+	 */
 	public static void setText(){
 		Game.text = "MANHATTAN";
 		Game.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
 	}
 	
+	/**
+	 * Define entries depending of the selected pattern
+	 */
 	public static void setDim(){
 		if (Game.pattern == 1){
 			Game.width = 4;
@@ -77,6 +99,11 @@ public class Game {
 		}
 	}
 	
+	/**
+	 * Get the entities to display, line by line
+	 * @param entityTab
+	 * @return
+	 */
 	public static ArrayList<String> getLines(ArrayList<EntityLetter> entityTab){
 		boolean test = Game.controlFields(Game.width,Game.height,Game.text);
 		if (!test){

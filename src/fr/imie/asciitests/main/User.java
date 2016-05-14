@@ -7,7 +7,11 @@ import fr.imie.asciitests.entities.EntityBase;
 import fr.imie.asciitests.interfaces.EntityLetter;
 
 public class User {
-
+	
+	/**
+	 * Entry point of the user class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Game.init();
 		EntityBase eb = new EntityBase();

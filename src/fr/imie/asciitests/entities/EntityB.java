@@ -13,7 +13,10 @@ public class EntityB extends EntityBase implements EntityLetter{
 		this.Representation2 = generateRepresentation2();
 	}
 
-	
+	/**
+	 * Generate representation for pattern 1
+	 * @return ArrayList
+	 */
 	public ArrayList<String> generateRepresentation1() {
 		ArrayList<String> result = new ArrayList<String>();
 		result.add("##  ");
@@ -27,7 +30,10 @@ public class EntityB extends EntityBase implements EntityLetter{
 		}
 		return result;
 	}
-	
+	/**
+	 * Generate representation for pattern 2
+	 * @return ArrayList
+	 */
 	public ArrayList<String> generateRepresentation2() {
 		ArrayList<String> result = new ArrayList<String>();
 		result.add(" .----------------. ");
@@ -48,7 +54,12 @@ public class EntityB extends EntityBase implements EntityLetter{
 		return result;
 	}
 
-
+	/**
+	 * Random replace of the char
+	 * TODO : Add faker to replace char (only for '#' char)
+	 * @param string
+	 * @param pattern
+	 */
 	private void AleaReplace(String string, int pattern) {
 		if (pattern == 1){
 			string.replace('#', super.getRandomChar());
