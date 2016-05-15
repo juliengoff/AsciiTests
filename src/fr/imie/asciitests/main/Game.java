@@ -6,6 +6,12 @@ import java.util.Collections;
 import fr.imie.asciitests.entities.EntityBase;
 import fr.imie.asciitests.interfaces.EntityLetter;
 
+/**
+ * Game entry point of the program
+ * Generate required patterns and set default values
+ * @author Benjamin & Julien
+ *
+ */
 public class Game {
 	public static int width, height, pattern;
 	public static String text, alphabet;

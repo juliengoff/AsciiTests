@@ -9,7 +9,10 @@ import com.github.javafaker.Faker;
 import fr.imie.asciitests.entityfactory.EntityFactory;
 import fr.imie.asciitests.interfaces.EntityLetter;
 
-
+/**
+ * Provides methods to work with Letters entities
+ * @author Benjamin & Julien
+ */
 public class EntityBase {
 
 	public String correspond;
@@ -31,11 +34,9 @@ public class EntityBase {
 	    return '#';
 	}
 	
+	
 	/**
-	 * Return random number between start and end
-	 * @param start
-	 * @param end
-	 * @return Integer
+	 * Return a random number between start and end numbers
 	 */
 	public static int randomizer(int start, int end) {
         return start + (int)Math.round(Math.random() * (end - start));

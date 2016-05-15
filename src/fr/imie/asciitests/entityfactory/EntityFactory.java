@@ -2,7 +2,10 @@ package fr.imie.asciitests.entityfactory;
 
 
 import fr.imie.asciitests.entities.*;
-
+/**
+ * Provides methods to get requested entities 
+ * @author Benjamin & Julien
+ */
 public class EntityFactory {
 	
 	/**

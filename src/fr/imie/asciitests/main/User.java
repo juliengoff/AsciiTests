@@ -6,6 +6,12 @@ import java.util.Collections;
 import fr.imie.asciitests.entities.EntityBase;
 import fr.imie.asciitests.interfaces.EntityLetter;
 
+/**
+ * User entry point of the program
+ * Use Game class to generate requested text
+ * @author Benjamin & Julien
+ *
+ */
 public class User {
 	
 	public static int width, height;
@@ -131,3 +137,5 @@ public class User {
 	}
 	
 }
+
+

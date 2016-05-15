@@ -63,6 +63,7 @@ public class EntityA extends EntityBase implements EntityLetter {
 	}
 
 
+
 	/**
 	 * Get corresondence ascii char
 	 * @return String
