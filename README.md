@@ -4,9 +4,9 @@ Unit tests projet for IMIE
 
 How to deploy : 
 
-Add Junit 4 librairy to project buildpath
+Add Junit 4 library to project buildpath
 
 Run command gradlew copyJarDependencies
 
-Add librairy from /libs folder to project buildpath
+Add library from /libs folder to project buildpath
 
