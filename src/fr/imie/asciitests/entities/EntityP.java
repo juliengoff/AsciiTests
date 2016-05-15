@@ -27,7 +27,7 @@ public class EntityP extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
+		return result;
 	}
 	/**
 	 * Random replace of the char
@@ -63,7 +63,7 @@ public class EntityP extends EntityBase implements EntityLetter{
 		for (String string : result) {
 			AleaReplace(string);
 		}
-		return null;
+		return result;
 	}
 
 

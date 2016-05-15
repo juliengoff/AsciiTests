@@ -115,7 +115,7 @@ public class Game {
         	output.add("");
         	ArrayList<String> line = new ArrayList<String>();
         	System.gc();
-        	if (pattern == 1){ // Concat lines
+        	if (Game.pattern == 1){ // Concat lines
             	for (EntityLetter entityLetter : entityTab) {
             		line =  entityLetter.generateRepresentation1();
             		try {
