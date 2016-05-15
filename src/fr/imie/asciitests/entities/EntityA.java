@@ -63,43 +63,13 @@ public class EntityA extends EntityBase implements EntityLetter {
 	private void AleaReplace(String string, int pattern) {
 		if (pattern == 1){
 			string.replace('#', super.getRandomChar());
-		}else {
+		} else {
 			string.replace('/', super.getRandomChar());
 			string.replace('_', super.getRandomChar());
 			string.replace('\\', super.getRandomChar());
 			string.replace('|', super.getRandomChar());
 		}
 		
-	}
-
-	/**
-	 * Get width of the pattern
-	 * @param Integer pattern
-	 * @return Integer
-	 */
-	public Integer getWidth(int pattern){
-		ArrayList<String> rep;
-		if (pattern == 1){
-			rep = this.Representation1;
-		}else {
-			rep = this.Representation2;
-		}
-		return rep.get(0).length();
-	}
-	
-	/**
-	 * Get height of the pattern
-	 * @param Integer pattern
-	 * @return Integer
-	 */
-	public Integer getHeight(int pattern){
-		ArrayList<String> rep;
-		if (pattern == 1){
-			rep = this.Representation1;
-		}else {
-			rep = this.Representation2;
-		}
-		return rep.size();
 	}
 
 	/**

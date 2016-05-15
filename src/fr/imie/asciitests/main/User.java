@@ -130,8 +130,6 @@ public class User {
         return output;
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 85eddfbf9adf9cbeb8c28469a6fdab4848a36be7
+
+
