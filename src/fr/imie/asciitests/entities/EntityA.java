@@ -25,9 +25,10 @@ public class EntityA extends EntityBase implements EntityLetter {
 		result.add("# # ");
 		result.add("# # ");
 		
-		for (String string : result) {
-			AleaReplace(string, 1);
+		for (int i = 0; i < result.size(); i++) {
+			result.set(i, AleaReplace(result.get(i)));
 		}
+		
 		return result;
 	}
 	/**
@@ -47,10 +48,7 @@ public class EntityA extends EntityBase implements EntityLetter {
 		result.add("| |              | |");
 		result.add("| '--------------' |");
 		result.add(" '----------------' ");
-		
-		for (String string : result) {
-			AleaReplace(string,2);
-		}
+	
 		return result;
 	}
 
@@ -60,47 +58,10 @@ public class EntityA extends EntityBase implements EntityLetter {
 	 * @param string
 	 * @param pattern
 	 */
-	private void AleaReplace(String string, int pattern) {
-		if (pattern == 1){
-			string.replace('#', super.getRandomChar());
-		}else {
-			string.replace('/', super.getRandomChar());
-			string.replace('_', super.getRandomChar());
-			string.replace('\\', super.getRandomChar());
-			string.replace('|', super.getRandomChar());
-		}
-		
+	private String AleaReplace(String string) {
+		return string.replace('#', super.getRandomChar());
 	}
 
-	/**
-	 * Get width of the pattern
-	 * @param Integer pattern
-	 * @return Integer
-	 */
-	public Integer getWidth(int pattern){
-		ArrayList<String> rep;
-		if (pattern == 1){
-			rep = this.Representation1;
-		}else {
-			rep = this.Representation2;
-		}
-		return rep.get(0).length();
-	}
-	
-	/**
-	 * Get height of the pattern
-	 * @param Integer pattern
-	 * @return Integer
-	 */
-	public Integer getHeight(int pattern){
-		ArrayList<String> rep;
-		if (pattern == 1){
-			rep = this.Representation1;
-		}else {
-			rep = this.Representation2;
-		}
-		return rep.size();
-	}
 
 	/**
 	 * Get corresondence ascii char

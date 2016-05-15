@@ -7,11 +7,15 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.github.javafaker.Faker;
+
 import org.junit.Assert;
 
 import fr.imie.asciitests.entities.*;
 import fr.imie.asciitests.interfaces.EntityLetter;
 import fr.imie.asciitests.main.Game;
+import fr.imie.asciitests.main.User;
 
 public class TestGame {
 
@@ -101,6 +105,102 @@ public class TestGame {
 			Assert.assertEquals(sampleTab.get(i).getCorrespond(), entityTab.get(i).getCorrespond());
 		}
 		
+		
+	}
+	
+	@Test
+	public void testAllEntityPattern1(){
+		Game.pattern = 1;
+		Game.setDim();
+		
+		ArrayList<EntityLetter> expectedTab = new ArrayList<EntityLetter>();
+		expectedTab.add(new EntityA());
+		expectedTab.add(new EntityB());
+		expectedTab.add(new EntityC());
+		expectedTab.add(new EntityD());
+		expectedTab.add(new EntityE());
+		expectedTab.add(new EntityF());
+		expectedTab.add(new EntityG());
+		expectedTab.add(new EntityH());
+		expectedTab.add(new EntityI());
+		expectedTab.add(new EntityJ());
+		expectedTab.add(new EntityK());
+		expectedTab.add(new EntityL());
+		expectedTab.add(new EntityM());
+		expectedTab.add(new EntityN());
+		expectedTab.add(new EntityO());
+		expectedTab.add(new EntityP());
+		expectedTab.add(new EntityQ());
+		expectedTab.add(new EntityR());
+		expectedTab.add(new EntityS());
+		expectedTab.add(new EntityT());
+		expectedTab.add(new EntityU());
+		expectedTab.add(new EntityV());
+		expectedTab.add(new EntityW());
+		expectedTab.add(new EntityX());
+		expectedTab.add(new EntityY());
+		expectedTab.add(new EntityZ());
+		expectedTab.add(new EntityQuestion());
+		
+		
+		
+		EntityBase eb = new EntityBase();
+		ArrayList<EntityLetter> entityTab = eb.getEntityTab(Game.alphabet);
+		
+		ArrayList<String> response = Game.getLines(entityTab);
+		ArrayList<String> expectedOut = Game.getLines(expectedTab);
+		
+		for (int i = 0; i < response.size(); i++) {
+			Assert.assertEquals(expectedOut.get(i), response.get(i));
+		}
+		
+	}
+	
+	@Test
+	public void testAllEntityPattern2(){
+		Game.pattern = 2;
+		Game.setDim();
+		
+		ArrayList<EntityLetter> expectedTab = new ArrayList<EntityLetter>();
+		expectedTab.add(new EntityA());
+		expectedTab.add(new EntityB());
+		expectedTab.add(new EntityC());
+		expectedTab.add(new EntityD());
+		expectedTab.add(new EntityE());
+		expectedTab.add(new EntityF());
+		expectedTab.add(new EntityG());
+		expectedTab.add(new EntityH());
+		expectedTab.add(new EntityI());
+		expectedTab.add(new EntityJ());
+		expectedTab.add(new EntityK());
+		expectedTab.add(new EntityL());
+		expectedTab.add(new EntityM());
+		expectedTab.add(new EntityN());
+		expectedTab.add(new EntityO());
+		expectedTab.add(new EntityP());
+		expectedTab.add(new EntityQ());
+		expectedTab.add(new EntityR());
+		expectedTab.add(new EntityS());
+		expectedTab.add(new EntityT());
+		expectedTab.add(new EntityU());
+		expectedTab.add(new EntityV());
+		expectedTab.add(new EntityW());
+		expectedTab.add(new EntityX());
+		expectedTab.add(new EntityY());
+		expectedTab.add(new EntityZ());
+		expectedTab.add(new EntityQuestion());
+		
+		
+		
+		EntityBase eb = new EntityBase();
+		ArrayList<EntityLetter> entityTab = eb.getEntityTab(Game.alphabet);
+		
+		ArrayList<String> response = Game.getLines(entityTab);
+		ArrayList<String> expectedOut = Game.getLines(expectedTab);
+		
+		for (int i = 0; i < response.size(); i++) {
+			Assert.assertEquals(expectedOut.get(i), response.get(i));
+		}
 		
 	}
 
