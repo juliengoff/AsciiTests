@@ -111,7 +111,7 @@ public class Game {
 		}
 		ArrayList<String> output = new ArrayList<String>();
 		 // Column
-        for (int i = 0; i < height; i++){
+        for (int i = 0; i < Game.height; i++){
         	output.add("");
         	ArrayList<String> line = new ArrayList<String>();
         	System.gc();
@@ -137,4 +137,5 @@ public class Game {
         }
         return output;
 	}
+	
 }

@@ -1,17 +1,23 @@
 package fr.imie.asciitests.tests;
 
-import static org.junit.Assert.*;
+import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.Assert;
+
+import fr.imie.asciitests.entities.*;
+import fr.imie.asciitests.interfaces.EntityLetter;
+import fr.imie.asciitests.main.Game;
 
 public class TestGame {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		Game.init();
 	}
 
 	@AfterClass
@@ -27,38 +33,75 @@ public class TestGame {
 	}
 
 	@Test
-	public void testMain() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testControlFields() {
-		fail("Not yet implemented");
+		boolean espected = false;
+		int sampleWidth = 50;
+		Assert.assertEquals(Game.controlFields(sampleWidth, Game.height, Game.text), espected);
 	}
 
 	@Test
 	public void testInit() {
-		fail("Not yet implemented");
+		Assert.assertNotNull(Game.pattern);
+		Assert.assertNotNull(Game.alphabet);
+		Assert.assertNotNull(Game.width);
+		Assert.assertNotNull(Game.height);
 	}
 
 	@Test
 	public void testSetPattern() {
-		fail("Not yet implemented");
+		Game.setPattern();
+		Assert.assertNotNull("Setting pattern", Game.pattern);
+		
 	}
 
 	@Test
 	public void testSetText() {
-		fail("Not yet implemented");
+		Game.setText();
+		String espectedText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
+		Assert.assertEquals(espectedText, Game.alphabet);
 	}
 
 	@Test
 	public void testSetDim() {
-		fail("Not yet implemented");
+		Game.setDim();
+		Assert.assertNotNull(Game.width);
+		Assert.assertNotNull(Game.height);
 	}
 
 	@Test
 	public void testGetLines() {
-		fail("Not yet implemented");
+		String sample = "T";
+		
+		ArrayList<EntityLetter> sampleTab = new ArrayList<EntityLetter>();
+		sampleTab.add(new EntityT());
+		
+		ArrayList<String> espectedTab = Game.getLines(sampleTab);
+		
+		
+		EntityBase eb = new EntityBase();
+        ArrayList<EntityLetter> entityTab = eb.getEntityTab(sample);
+        
+        ArrayList<String> response = Game.getLines(entityTab);
+		
+		for (int i = 0; i < response.size(); i++){
+			Assert.assertEquals(espectedTab.get(i), response.get(i));
+		}
+	}
+	
+	@Test
+	public void testEntityTab(){
+		String sample = "T";
+		EntityBase eb = new EntityBase();
+        ArrayList<EntityLetter> entityTab = eb.getEntityTab(sample);
+        
+        ArrayList<EntityLetter> sampleTab = new ArrayList<EntityLetter>();
+		sampleTab.add(new EntityT());
+		
+		for (int i = 0; i < entityTab.size(); i++) {
+			Assert.assertEquals(sampleTab.get(i).getCorrespond(), entityTab.get(i).getCorrespond());
+		}
+		
+		
 	}
 
 }
